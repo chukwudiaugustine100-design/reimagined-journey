@@ -1,0 +1,88 @@
+/* Sidebar is fixed on desktop */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0; /* Visible on desktop */
+    width: 300px;
+    /* ... other styles */
+    transition: left 0.3s ease;
+}
+
+/* --- Media Query for Mobile (992px and below) --- */
+@media (max-width: 992px) {
+    /* Step 1: Hide the sidebar initially off-screen */
+    .sidebar {
+        width: 100%; /* Full width when active */
+        left: -100%; /* **Crucial:** Moves the sidebar entirely off the left of the screen */
+        /* ... other styles (like z-index, height: 100vh) */
+    }
+
+    /* Step 2: Show the hamburger menu */
+    .hamburger-menu {
+        display: block; /* Makes the hamburger icon visible on mobile */
+        /* ... other styles */
+    }
+
+    /* Step 3: Use the checkbox (menu-toggle) to show the sidebar */
+    .menu-toggle:checked ~ .sidebar {
+        left: 0; /* Brings the sidebar back into view */
+    }
+}
+/* --- Footer (Corrected Style) --- */
+.site-footer {
+    text-align: center;
+    padding: 20px 40px;
+    background-color: #111;
+    color: var(--text-color);
+    font-size: 0.9em;
+    /* REMOVE THIS LINE: margin-left: 300px; */ 
+    margin-left: 0; /* Resetting or removing the margin ensures 100% width */
+    width: 100%; /* Although 100% is default for block elements, explicitly setting it helps */
+    box-sizing: border-box; /* Ensures padding is included within the 100% width */
+}
+
+/* You will need a media query to handle the overall layout correctly */
+
+@media (max-width: 992px) {
+    /* ... (Existing rules) ... */
+
+    /* Ensure footer margin is 0 on mobile too */
+    .site-footer {
+        margin-left: 0;
+    }
+}
+/* Add this to your CSS file (e.g., styles.css) */
+
+/* Profile Photo Area - Existing Container Styles */
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    /* background-color: var(--border-color); - No longer needed as the image provides color */
+    margin-bottom: 20px;
+    border: 5px solid var(--primary-color);
+    overflow: hidden; /* Crucial to ensure the image is clipped to the circle */
+}
+
+/* New Image Styles */
+.sidebar-profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the circle without distortion */
+    display: block;
+}
+/* Update your contact section CSS */
+
+/* This targets the specific icon class for WhatsApp */
+.whatsapp-icon {
+    /* Use the official WhatsApp green color */
+    color: #25D366; 
+}
+
+/* Ensure the generic method-icon styles are still applied */
+.method-icon {
+    font-size: 1.5em;
+    /* This color applies to the mail/call icons if not overridden: color: var(--primary-color); */
+    width: 30px;
+    text-align: center;
+}
