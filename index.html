@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>C-DEV | Portfolio</title>
+    <style>
+        /* --- RESET & BASE STYLES --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* --- HEADER & NAV --- */
+        header {
+            background: #1a237e;
+            color: white;
+            padding: 1rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 25px;
+        }
+
+        .nav-links a:hover {
+            color: #ffab00;
+        }
+
+        /* Hamburger */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 5px auto;
+            transition: 0.4s;
+        }
+
+        /* --- SECTIONS --- */
+        section {
+            padding: 100px 10% 60px;
+            min-height: 80vh;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            color: #1a237e;
+        }
+
+        /* Home */
+        #home {
+            background: linear-gradient(rgba(26, 35, 126, 0.8), rgba(26, 35, 126, 0.8)), url('c-dev123.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* About Section (Two Divs: Left Text, Right Image) */
+        .about-container {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-image {
+            flex: 1;
+            text-align: right;
+        }
+
+        .about-image img {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 15px;
+            box-shadow: 10px 10px 0 #ffab00;
+        }
+
+        /* Project Grid */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            border: 1px solid #eee;
+            padding: 20px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Testimonial */
+        .testimonial-item {
+            background: #f4f4f4;
+            padding: 30px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .testimonial-item img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .testimonial-item h4 {
+            color: #1a237e;
+        }
+
+        .testimonial-item span {
+            font-size: 0.9rem;
+            color: #777;
+            font-style: italic;
+        }
+
+        /* Resume */
+        #resume {
+            text-align: center;
+            background: #fafafa;
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #ffab00;
+            color: #1a237e;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .download-btn:hover {
+            background: #e69a00;
+        }
+
+        /* Contact Section (Two Divs: Left Info, Right Map) */
+        .contact-container {
+            display: flex;
+            gap: 40px;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-map {
+            flex: 1;
+            height: 300px;
+            background: #eee;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ccc;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: #1a237e;
+            color: white;
+            padding: 50px 10% 20px;
+            text-align: center;
+        }
+
+        .footer-nav {
+            margin: 20px 0;
+        }
+
+        .footer-nav a {
+            margin: 0 10px;
+            font-size: 0.9rem;
+        }
+
+        .social-icons {
+            margin-bottom: 20px;
+        }
+
+        .social-icons a {
+            margin: 0 15px;
+            font-size: 1.2rem;
+            color: #ffab00;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background: #1a237e;
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links li {
+                margin: 20px 0;
+            }
+
+            .about-container,
+            .contact-container,
+            .testimonial-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-image {
+                text-align: center;
+                order: -1;
+            }
+        }
+
+        .contact-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .contact-info,
+        .contact-map {
+            flex: 1;
+            /* Ensures both divs take up equal space */
+        }
+
+        .contact-map {
+            min-height: 350px;
+            width: 100%;
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            .contact-container {
+                flex-direction: column;
+            }
+
+            .contact-map {
+                width: 100%;
+                margin-top: 20px;
+            }
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            overflow: hidden;
+            /* Ensures the image doesn't bleed out of rounded corners */
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-img-container {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .project-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Maintains aspect ratio while filling the container */
+            transition: 0.5s ease;
+        }
+
+        .project-card:hover .project-img-container img {
+            transform: scale(1.1);
+            /* Subtle zoom effect on hover */
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        .project-content h3 {
+            margin-bottom: 10px;
+            color: #1a237e;
+        }
+
+        /* Testimonial Grid Layout */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            justify-content: center;
+        }
+
+        .testimonial-item {
+            background: #fdfdfd;
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+            /* Stacks image above text within the card */
+            align-items: center;
+            text-align: center;
+            transition: 0.3s ease;
+        }
+
+        .testimonial-item:hover {
+            border-color: #ffab00;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .testimonial-item img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 3px solid #1a237e;
+        }
+
+        .testimonial-item h4 {
+            color: #1a237e;
+            font-size: 1.2rem;
+            margin-bottom: 2px;
+        }
+
+        .testimonial-item span {
+            font-size: 0.85rem;
+            color: #ffab00;
+            font-weight: 600;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-item p {
+            font-size: 0.95rem;
+            color: #555;
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        /* Mobile Tweak */
+        @media (max-width: 600px) {
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+                /* Single column on very small screens */
+            }
+        }
+
+        .contact-info p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .contact-link {
+            color: #1a237e;
+            /* Matches your brand blue */
+            font-weight: 600;
+            transition: 0.3s;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+        }
+
+        .contact-link:hover {
+            color: #ffab00;
+            /* Matches your brand yellow */
+            border-bottom: 2px solid #ffab00;
+        }
+
+        .contact-container {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        /* Ensure responsiveness for the two-div layout */
+        @media (max-width: 768px) {
+            .contact-container {
+                flex-direction: column;
+            }
+
+            .contact-info,
+            .contact-map {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo"><a href="index.html"><img src="c-dev44.png" width="100"></a></div>
+        <ul class="nav-links" id="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#project">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#testimonial">Testimonials</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </header>
+
+    <section id="home">
+        <h1>Hi, I'm Chukwudi Augustine</h1>
+        <p>Wed Developer & Graphic Designer</p>
+    </section>
+
+
+
+    <section id="project">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <!-- Project Card 1 -->
+            <div class="project-card">
+                <div class="project-img-container">
+                    <img src="images/e-commerce12.png" alt="e-commerce">
+                </div>
+                <div class="project-content">
+                    <h3>E-Commerce</h3>
+                    <p>An e-commerce platform featuring Naira currency support and a "Buy via WhatsApp" integration.</p>
+                </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="project-card">
+                <div class="project-img-container">
+                    <img src="images/hosting1.jpg" alt="fashion store">
+                </div>
+                <div class="project-content">
+                    <h3>Fashion Store</h3>
+                    <p>A fashion store for were the sells shoes and bags.</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img-container">
+                    <img src="images/mezu5a.jpg" alt="graphic design">
+                </div>
+                <div class="project-content">
+                    <h3>Graphic Design</h3>
+                    <p>I design it for a customer</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img-container">
+                    <img src="images/birthday.jpg" alt="graphic design">
+                </div>
+                <div class="project-content">
+                    <h3>Graphic Design</h3>
+                    <p>I design it for a customer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resume">
+        <h2>My Resume</h2>
+        <p>Interested in working together? Download my detailed CV below.</p>
+        <!-- Place your PDF file in the same folder and update the href -->
+        <a href="resume/chukwudi-cv.pdf" class="download-btn" download>Download CV (PDF)</a>
+    </section>
+
+    <section id="testimonial">
+        <h2>Client Testimonials</h2>
+        <div class="testimonial-grid">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-item">
+                <img src="images/8d4e01265a6939caa39cf55fcfc19720.jpg" alt="John Smith">
+                <div class="t-info">
+                    <h4>John Smith</h4>
+                    <span>Creative Director</span>
+                    <p>"C-DEV delivered an exceptional landing page that perfectly captured our brand identity. The
+                        attention to detail is unmatched."</p>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-item">
+                <img src="images/long.jpg" alt="Sarah Adams">
+                <div class="t-info">
+                    <h4>Sarah Adams</h4>
+                    <span>Marketing Lead</span>
+                    <p>"The WhatsApp integration for our shoe business site made sales so much easier. Highly
+                        professional work!"</p>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial-item">
+                <img src="images/jollof.jpg" alt="David Okoro">
+                <div class="t-info">
+                    <h4>David Okoro</h4>
+                    <span>Proprietor</span>
+                    <p>"The school management system simplified our attendance and grading process. A top-tier
+                        developer."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-container">
+            <div class="about-text">
+                <p>I specialize in full-fledged web developer and graphic design, creating user-centered digital
+                    experiences with clean code and design thinking. Based in Owerri, I help brands grow through
+                    innovative web solutions.</p>
+            </div>
+            <div class="about-image">
+                <img src="images/image.jpg" alt="Work Space">
+            </div>
+        </div>
+    </section>
+
+    <!-- Replace your current #contact section with this code -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-container">
+            <!-- Left Side: Interactive Contact Details -->
+            <div class="contact-info">
+                <p>
+                    <strong>Call:</strong>
+                    <a href="tel:+2347047168327" class="contact-link">+234 704 716 8327</a>
+                </p>
+                <p>
+                    <strong>WhatsApp:</strong>
+                    <a href="https://wa.me/2348162892235" target="_blank" class="contact-link">+234 816 289 2235</a>
+                </p>
+                <p>
+                    <strong>Email:</strong>
+                    <a href="mailto:chukwudiaugustine100@gmail.com"
+                        class="contact-link">chukwudiaugustine100@gmail.com</a>
+                </p>
+                <p>
+                    <strong>Location:</strong>
+                    <a href="https://maps.app.goo.gl/YourGoogleMapsLink" target="_blank" class="contact-link">Owerri,
+                        Nigeria</a>
+                </p>
+            </div>
+
+            <!-- Right Side: Interactive Google Map -->
+            <div class="contact-map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63560.03264426839!2d6.974916848632811!3d5.492543900000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104259ba2f99587f%3A0x6b29d9361732a39a!2sOwerri!5e0!3m2!1sen!2sng!4v1715456000000!5m2!1sen!2sng"
+                    width="100%" height="350" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="logo" style="margin-bottom: 15px;"><a href="index1.html"><img src="c-dev44.png" width="100"></a>
+        </div>
+
+        <!-- Social Media Icons Section -->
+        <div class="social-icons">
+            <a href="https://web.facebook.com/chukwudi.augustine.179042/" target="_blank" title="Facebook">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://wa.me/2348162892235" target="_blank" title="WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="https://x.com/chukwud05632310" target="_blank" title="X (Twitter)">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+        </div>
+
+        <div class="footer-nav">
+            <a href="#home">Home</a> |
+            <a href="#about">About</a> |
+            <a href="#project">Projects</a> |
+            <a href="#contact">Contact</a>
+        </div>
+
+        <p>&copy; 2026 C-DEV. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        // Toggle mobile menu
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            // Hamburger animation
+            const bars = document.querySelectorAll('.bar');
+            bars[0].style.transform = navMenu.classList.contains('active') ? 'rotate(-45deg) translate(-5px, 6px)' : 'none';
+            bars[1].style.opacity = navMenu.classList.contains('active') ? '0' : '1';
+            bars[2].style.transform = navMenu.classList.contains('active') ? 'rotate(45deg) translate(-5px, -6px)' : 'none';
+        });
+
+        // Close menu on link click
+        document.querySelectorAll('.nav-links a').forEach(n => n.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            const bars = document.querySelectorAll('.bar');
+            bars[0].style.transform = 'none';
+            bars[1].style.opacity = '1';
+            bars[2].style.transform = 'none';
+        }));
+    </script>
+</body>
+
+</html>
