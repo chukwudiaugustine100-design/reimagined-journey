@@ -1,406 +1,694 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chukwudi's Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <input type="checkbox" id="menu-toggle" class="menu-toggle">
-
-    <label for="menu-toggle" class="hamburger-menu">
-        <span></span>
-        <span></span>
-        <span></span>
-    </label>
-    
-    <div class="sidebar">
-        <div class="profile-photo">
-            <img src="images/image.jpg" alt="Chukwudi Augustine Profile Photo" class="sidebar-profile-img">
-            </div>
-        <nav>
-            <ul>
-                <li><a href="#home" class="active">HOME</a></li>
-                <li><a href="#about-me">ABOUT ME</a></li>
-                <li><a href="#resume">RESUME</a></li>
-                <li><a href="#portfolio">PORTFOLIO</a></li>
-                <li><a href="#testimonials">TESTIMONIALS</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-            </ul>
-        </nav>
-       <div class="sidebar-icons">
-    <a href="mailto:chukwudiaugustine100@gmail.com" target="_blank" class="icon-link email">
-        <span class="icon">&#9993;</span>
-    </a>
-    <a href="https://www.linkedin.com/in/chukwudi-augustine-137128277" target="_blank" class="icon-link linkedin">
-        <span class="icon">&#9733;</span>
-    </a>
-    <a href="https://github.com/chukwudiaugustine100" target="_blank" class="icon-link github">
-        <span class="icon">&#9881;</span>
-    </a>
-</div>
-    </div>
-
-    <main class="content">
-
-       <section id="home" class="hero-section">
-    <div class="hero-text">
-    <h1>HI THERE! I'M <span class="accent-text">CHUKWUDI</span></h1>
-    <p>GRAPHIC DESIGNER / WEB DEVELOPER</p>
-    <a href="#about-me" class="cta-button">MORE ABOUT ME</a>
-</div>
-    
-    <div class="hero-image">
-        <img src="images/1760712972866.png" alt="Professional Portfolio Photo">
-    </div>
-</section>
-
-        <section id="about-me" class="about-me-section">
-            <h2>ABOUT ME</h2>
-            <div class="about-content">
-    <div class="profile-intro">
-        <h3>I'm Chukwudi Augustine, Graphic Designer / Web Developer</h3>
-        <p>
-           I'm a versatile and creative professional who 
-           combines the technical expertise of Web Development with 
-           the artistic skill of Graphic Design. I specialize in building 
-           visually appealing, user-friendly, and functional digital exper
-           iences from concept to launch
-        </p>
-    </div>
-
-    <div class="stats-container">
-        <div class="stat-box">
-            <span class="stat-number">15+</span>
-            <span class="stat-label">YEARS EXPERIENCE</span>
-        </div>
-
-        <div class="stat-box">
-            <span class="stat-number">350+</span>
-            <span class="stat-label">HAPPY CLIENTS</span>
-        </div>
-
-        <div class="stat-box">
-            <span class="stat-number">45K</span>
-            <span class="stat-label">FOLLOWERS</span>
-        </div>
-    </div>
-
-    <div class="what-i-do">
-        <h4>What I Do?</h4>
-        <div class="service-item">
-            <span class="service-icon">&#9992;</span>
-            <span class="service-text">GRAPHIC DESIGN</span>
-        </div>
-        <div class="service-item">
-            <span class="service-icon">&#9992;</span>
-            <span class="service-text">WEB DEVELOPER</span>
-        </div>
-    </div>
-</div>
-            </section>
-
-        <section id="resume" class="standard-section">
-            <h2>RESUME</h2>
-            <div class="resume-container">
-    
-    <div class="resume-column">
-        <h3>EDUCATION</h3>
-        
-        <div class="timeline-item">
-            <span class="timeline-date">2023 - 2025</span>
-            <h4 class="timeline-title">Computer Science</h4>
-            <p class="timeline-institution">University of Innovation</p>
-            <p class="timeline-description">
-                Focused studies on modern typography and user experience principles.
-            </p>
-        </div>
-
-        <div class="timeline-item">
-            <span class="timeline-date">2023 - 2025</span>
-            <h4 class="timeline-title">Bachelor of Science in SWD</h4>
-            <p class="timeline-institution">University of Innovation</p>
-            <p class="timeline-description">
-                Graduated with honors, specialized in digital and studio portraiture.
-            </p>
-        </div>
-    </div>
-
-    <div class="resume-column">
-        <h3>EXPERIENCE</h3>
-
-        <div class="timeline-item">
-            <span class="timeline-date">2024 - 2025</span>
-            <h4 class="timeline-title">Senior Graphic Artist</h4>
-            <p class="timeline-institution">Studio Nine Design</p>
-            <p class="timeline-description">
-                Developed over 100 successful branding packages for startups across the globe.
-            </p>
-        </div>
-        
-    </div>
-</div>
-            </section>
-
-        <section id="portfolio" class="portfolio-section">
-            <h2>PORTFOLIO</h2>
-            <div class="portfolio-content">
-    
-    <div class="portfolio-filters">
-        <button class="filter-btn active" data-filter="all">ALL</button>
-        <button class="filter-btn" data-filter="graphic-design">GRAPHIC DESIGN</button>
-        <button class="filter-btn" data-filter="web-design">WEB DEVELOPER</button>
-    </div>
-
-    <div class="portfolio-grid">
-        
-        <div class="grid-item web-design">
-            <img src="images/e-commerce.png" alt="Web Design Project 3">
-            <div class="overlay">E-commerce Site</div>
-        </div>
-        
-        <div class="grid-item graphic-design">
-            <img src="images/portfolio image.jpg" alt="Graphic Design Project 4">
-            <div class="overlay">Poster Series</div>
-        </div>
-
-        <div class="grid-item photography">
-            <img src="images/flyer 3.jpg" alt="Photography Project 5">
-            <div class="overlay">Portrait Session</div>
-        </div>
-        
-        <div class="grid-item photography">
-            <img src="images/flyer.jpg" alt="Photography Project 5">
-            <div class="overlay">Portrait Session</div>
-        </div>
-
-        <div class="grid-item photography">
-            <img src="images/HOPE IN CHRIST CHURCH FLYER.png" alt="Photography Project 5">
-            <div class="overlay">Portrait Session</div>
-        </div>
-    </div>
-</div>
-            </section>
-        
-        <section id="testimonials" class="standard-section">
-            <h2>TESTIMONIALS</h2>
-            <div class="testimonials-container">
-    
-    <div class="testimonial-card">
-        <div class="testimonial-header">
-            <div class="client-photo">
-                <img src="images/jollof.avif" alt="client-image" width="80"/>
-                </div>
-            <div class="client-info">
-                <h4 class="client-name">JOHN DOE</h4>
-                <p class="client-title">Creative Director</p>
-            </div>
-        </div>
-        <div class="testimonial-rating">
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star half">&#9733;</span> </div>
-        <p class="testimonial-text">
-            "Chukwudi delivered high-quality work on time and exceeded our expectations. 
-            Highly recommended for any web design project."
-        </p>
-    </div>
-
-    <div class="testimonial-card">
-        <div class="testimonial-header">
-            <div class="client-photo">
-                <img src="images/long.avif" alt="client-image" width="80"/>
-                </div>
-            <div class="client-info">
-                <h4 class="client-name">SARAH LEE</h4>
-                <p class="client-title">Marketing Manager</p>
-            </div>
-        </div>
-        <div class="testimonial-rating">
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-        </div>
-        <p class="testimonial-text">
-            "The photography work was stunning and captured exactly the essence we were looking for. True professional."
-        </p>
-    </div>
-
-    <div class="testimonial-card">
-        <div class="testimonial-header">
-            <div class="client-photo">
-                <img src="images/slide-2.png" alt="client-image" width="80"/>
-                </div>
-            <div class="client-info">
-                <h4 class="client-name">MIKE CHEN</h4>
-                <p class="client-title">CEO of TechStart</p>
-            </div>
-        </div>
-        <div class="testimonial-rating">
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star half">&#9733;</span>
-        </div>
-        <p class="testimonial-text">
-            "We love our new brand identity. Benjamin took our abstract ideas and turned them into a polished, visual reality."
-        </p>
-    </div>
-</div>
-        </section>
-        <section id="contact" class="standard-section">
-            <h2>CONTACT</h2>
-           <div class="contact-container">
-    <div class="contact-info">
-        <h3>CONTACT</h3>
-        <p>Feel free to drop me a line on any questions or project proposals.</p>
-        
-        <div class="contact-methods">
-            <div class="method-item">
-                <span class="method-icon">&#9993;</span> <div class="method-text">
-                    <span class="method-label">Email:</span>
-                    <a href="mailto:chukwudiaugustine100@gmail.com">chukwudiaugustine100@gmail.com</a>
-                </div>
-            </div>
-
-            <div class="method-item">
-                <span class="method-icon">&#9742;</span> <div class="method-text">
-                    <span class="method-label">Call:</span>
-                    <a href="tel:+2347047168327">+2347047168327</a>
-                </div>
-            </div>
-
-        <div class="method-item">
-    <span class="method-icon whatsapp-icon">&#9990;</span> <div class="method-text">
-        <span class="method-label">WhatsApp:</span>
-        <a href="https://wa.me/+2348162892235" target="_blank">+2348162892235</a>
-    </div>
-</div>
-        </div>
-        <p class="thanks-message">THANKS FOR PATIENCE!</p>
-    </div>
-
-    <form class="contact-form">
-        <div class="form-group">
-            <input type="text" id="name" name="name" placeholder="Your Name" required>
-        </div>
-        <div class="form-group">
-            <input type="email" id="email" name="email" placeholder="Your Email" required>
-        </div>
-        <div class="form-group">
-            <input type="text" id="subject" name="subject" placeholder="Subject">
-        </div>
-        <div class="form-group">
-            <textarea id="message" name="message" rows="5" placeholder="Your Message..." required></textarea>
-        </div>
-        <button type="submit" class="submit-button">SEND MESSAGE</button>
-    </form>
-</div>
-        </section>
-
-
-    <footer class="site-footer">
-        <p>&copy; <span id="current-year"></span> Chukwudi Augustine. All Rights Reserved.</p>
-        <p class="design-credit">Designed and Developed by CHUKWUDI</p>
-    </footer>
-
- <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        
-        // 1. Footer Current Year
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-
-        // 2. Portfolio Filters
-        const filterButtons = document.querySelectorAll('.filter-btn');
-        const portfolioItems = document.querySelectorAll('.grid-item');
-
-        filterButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                // Update active button state
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                this.classList.add('active');
-
-                const filterValue = this.getAttribute('data-filter');
-
-                // Filter items
-                portfolioItems.forEach(item => {
-                    if (filterValue === 'all' || item.classList.contains(filterValue)) {
-                        item.style.display = 'block'; 
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-            });
-        });
-        
-        // 3. Active Link and Mobile Menu Auto-close
-        const navLinks = document.querySelectorAll('.sidebar nav ul li a');
-        const menuToggle = document.getElementById('menu-toggle');
-
-        // Function to remove all active classes
-        function removeActiveClass() {
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-            });
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>C-DEV | Portfolio</title>
+    <style>
+        /* --- RESET & BASE STYLES --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        // Add event listener to links (handles both scrolling and mobile closing)
-        navLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
-                // Only prevent default if we want smooth scrolling (optional, but good practice)
-                // e.preventDefault(); 
-                
-                // Set the clicked link as active immediately
-                removeActiveClass();
-                this.classList.add('active');
+        html {
+            scroll-behavior: smooth;
+        }
 
-                // If on mobile, close the menu after clicking a link
-                if (window.innerWidth <= 992) {
-                    menuToggle.checked = false; // Uncheck the hidden checkbox
-                }
+        body {
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
 
-                // If you kept the 'e.preventDefault()' line, you would need to manually scroll:
-                /* const targetId = this.getAttribute('href').substring(1);
-                const targetSection = document.getElementById(targetId);
-                targetSection.scrollIntoView({ behavior: 'smooth' });
-                */
-            });
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* --- HEADER & NAV --- */
+        header {
+            background: #1a237e;
+            color: white;
+            padding: 1rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 25px;
+        }
+
+        .nav-links a:hover {
+            color: #ffab00;
+        }
+
+        /* Hamburger */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 5px auto;
+            transition: 0.4s;
+        }
+
+        /* --- SECTIONS --- */
+        section {
+            padding: 100px 10% 60px;
+            min-height: 80vh;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            color: #1a237e;
+        }
+
+        /* Home */
+        #home {
+            background: linear-gradient(rgba(26, 35, 126, 0.8), rgba(26, 35, 126, 0.8)), url('c-dev123.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* About Section (Two Divs: Left Text, Right Image) */
+        .about-container {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-image {
+            flex: 1;
+            text-align: right;
+        }
+
+        .about-image img {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 15px;
+            box-shadow: 10px 10px 0 #ffab00;
+        }
+
+        /* Project Grid */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            border: 1px solid #eee;
+            padding: 20px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Testimonial */
+        .testimonial-item {
+            background: #f4f4f4;
+            padding: 30px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .testimonial-item img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .testimonial-item h4 {
+            color: #1a237e;
+        }
+
+        .testimonial-item span {
+            font-size: 0.9rem;
+            color: #777;
+            font-style: italic;
+        }
+
+        /* Resume */
+        #resume {
+            text-align: center;
+            background: #fafafa;
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #ffab00;
+            color: #1a237e;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .download-btn:hover {
+            background: #e69a00;
+        }
+
+        /* Contact Section (Two Divs: Left Info, Right Map) */
+        .contact-container {
+            display: flex;
+            gap: 40px;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-map {
+            flex: 1;
+            height: 300px;
+            background: #eee;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ccc;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: #1a237e;
+            color: white;
+            padding: 50px 10% 20px;
+            text-align: center;
+        }
+
+        .footer-nav {
+            margin: 20px 0;
+        }
+
+        .footer-nav a {
+            margin: 0 10px;
+            font-size: 0.9rem;
+        }
+
+        .social-icons {
+            margin-bottom: 20px;
+        }
+
+        .social-icons a {
+            margin: 0 15px;
+            font-size: 1.2rem;
+            color: #ffab00;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background: #1a237e;
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links li {
+                margin: 20px 0;
+            }
+
+            .about-container,
+            .contact-container,
+            .testimonial-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-image {
+                text-align: center;
+                order: -1;
+            }
+        }
+
+        .contact-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .contact-info,
+        .contact-map {
+            flex: 1;
+            /* Ensures both divs take up equal space */
+        }
+
+        .contact-map {
+            min-height: 350px;
+            width: 100%;
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            .contact-container {
+                flex-direction: column;
+            }
+
+            .contact-map {
+                width: 100%;
+                margin-top: 20px;
+            }
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            overflow: hidden;
+            /* Ensures the image doesn't bleed out of rounded corners */
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-img-container {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .project-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Maintains aspect ratio while filling the container */
+            transition: 0.5s ease;
+        }
+
+        .project-card:hover .project-img-container img {
+            transform: scale(1.1);
+            /* Subtle zoom effect on hover */
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        .project-content h3 {
+            margin-bottom: 10px;
+            color: #1a237e;
+        }
+
+        /* Testimonial Grid Layout */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            justify-content: center;
+        }
+
+        .testimonial-item {
+            background: #fdfdfd;
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+            /* Stacks image above text within the card */
+            align-items: center;
+            text-align: center;
+            transition: 0.3s ease;
+        }
+
+        .testimonial-item:hover {
+            border-color: #ffab00;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .testimonial-item img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 3px solid #1a237e;
+        }
+
+        .testimonial-item h4 {
+            color: #1a237e;
+            font-size: 1.2rem;
+            margin-bottom: 2px;
+        }
+
+        .testimonial-item span {
+            font-size: 0.85rem;
+            color: #ffab00;
+            font-weight: 600;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-item p {
+            font-size: 0.95rem;
+            color: #555;
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        /* Mobile Tweak */
+        @media (max-width: 600px) {
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+                /* Single column on very small screens */
+            }
+        }
+
+        .contact-info p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .contact-link {
+            color: #1a237e;
+            /* Matches your brand blue */
+            font-weight: 600;
+            transition: 0.3s;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+        }
+
+        .contact-link:hover {
+            color: #ffab00;
+            /* Matches your brand yellow */
+            border-bottom: 2px solid #ffab00;
+        }
+
+        .contact-container {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        /* Ensure responsiveness for the two-div layout */
+        @media (max-width: 768px) {
+            .contact-container {
+                flex-direction: column;
+            }
+
+            .contact-info,
+            .contact-map {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo"><a href="index1.html"><img src="c-dev44.png" width="100"></a></div>
+        <ul class="nav-links" id="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#project">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#testimonial">Testimonials</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </header>
+
+    <section id="home">
+        <h1>Hi, I'm Chukwudi Augustine</h1>
+        <p>Wed Developer & Graphic Designer</p>
+    </section>
+
+
+
+    <section id="project">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <!-- Project Card 1 -->
+            <div class="project-card">
+                <div class="project-img-container">
+                    <img src="images/e-commerce12.png" alt="e-commerce">
+                </div>
+                <div class="project-content">
+                    <h3>E-Commerce</h3>
+                    <p>An e-commerce platform featuring Naira currency support and a "Buy via WhatsApp" integration.</p>
+                </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="project-card">
+                <div class="project-img-container">
+                    <img src="images/hosting1.jpg" alt="fashion store">
+                </div>
+                <div class="project-content">
+                    <h3>Fashion Store</h3>
+                    <p>A fashion store for were the sells shoes and bags.</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img-container">
+                    <img src="images/mezu5a.jpg" alt="graphic design">
+                </div>
+                <div class="project-content">
+                    <h3>Graphic Design</h3>
+                    <p>I design it for a customer</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img-container">
+                    <img src="images/birthday.jpg" alt="graphic design">
+                </div>
+                <div class="project-content">
+                    <h3>Graphic Design</h3>
+                    <p>I design it for a customer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resume">
+        <h2>My Resume</h2>
+        <p>Interested in working together? Download my detailed CV below.</p>
+        <!-- Place your PDF file in the same folder and update the href -->
+        <a href="resume/chukwudi-cv.pdf" class="download-btn" download>Download CV (PDF)</a>
+    </section>
+
+    <section id="testimonial">
+        <h2>Client Testimonials</h2>
+        <div class="testimonial-grid">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-item">
+                <img src="images/8d4e01265a6939caa39cf55fcfc19720.jpg" alt="John Smith">
+                <div class="t-info">
+                    <h4>John Smith</h4>
+                    <span>Creative Director</span>
+                    <p>"C-DEV delivered an exceptional landing page that perfectly captured our brand identity. The
+                        attention to detail is unmatched."</p>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-item">
+                <img src="images/long.jpg" alt="Sarah Adams">
+                <div class="t-info">
+                    <h4>Sarah Adams</h4>
+                    <span>Marketing Lead</span>
+                    <p>"The WhatsApp integration for our shoe business site made sales so much easier. Highly
+                        professional work!"</p>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial-item">
+                <img src="images/jollof.jpg" alt="David Okoro">
+                <div class="t-info">
+                    <h4>David Okoro</h4>
+                    <span>Proprietor</span>
+                    <p>"The school management system simplified our attendance and grading process. A top-tier
+                        developer."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-container">
+            <div class="about-text">
+                <p>I specialize in full-fledged web developer and graphic design, creating user-centered digital
+                    experiences with clean code and design thinking. Based in Owerri, I help brands grow through
+                    innovative web solutions.</p>
+            </div>
+            <div class="about-image">
+                <img src="images/image.jpg" alt="Work Space">
+            </div>
+        </div>
+    </section>
+
+    <!-- Replace your current #contact section with this code -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-container">
+            <!-- Left Side: Interactive Contact Details -->
+            <div class="contact-info">
+                <p>
+                    <strong>Call:</strong>
+                    <a href="tel:+2347047168327" class="contact-link">+234 704 716 8327</a>
+                </p>
+                <p>
+                    <strong>WhatsApp:</strong>
+                    <a href="https://wa.me/2348162892235" target="_blank" class="contact-link">+234 816 289 2235</a>
+                </p>
+                <p>
+                    <strong>Email:</strong>
+                    <a href="mailto:chukwudiaugustine100@gmail.com"
+                        class="contact-link">chukwudiaugustine100@gmail.com</a>
+                </p>
+                <p>
+                    <strong>Location:</strong>
+                    <a href="https://maps.app.goo.gl/YourGoogleMapsLink" target="_blank" class="contact-link">Owerri,
+                        Nigeria</a>
+                </p>
+            </div>
+
+            <!-- Right Side: Interactive Google Map -->
+            <div class="contact-map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63560.03264426839!2d6.974916848632811!3d5.492543900000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104259ba2f99587f%3A0x6b29d9361732a39a!2sOwerri!5e0!3m2!1sen!2sng!4v1715456000000!5m2!1sen!2sng"
+                    width="100%" height="350" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="logo" style="margin-bottom: 15px;"><a href="index1.html"><img src="c-dev44.png" width="100"></a>
+        </div>
+
+        <!-- Social Media Icons Section -->
+        <div class="social-icons">
+            <a href="https://web.facebook.com/chukwudi.augustine.179042/" target="_blank" title="Facebook">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://wa.me/2348162892235" target="_blank" title="WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="https://x.com/chukwud05632310" target="_blank" title="X (Twitter)">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+        </div>
+
+        <div class="footer-nav">
+            <a href="#home">Home</a> |
+            <a href="#about">About</a> |
+            <a href="#project">Projects</a> |
+            <a href="#contact">Contact</a>
+        </div>
+
+        <p>&copy; 2026 C-DEV. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        // Toggle mobile menu
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            // Hamburger animation
+            const bars = document.querySelectorAll('.bar');
+            bars[0].style.transform = navMenu.classList.contains('active') ? 'rotate(-45deg) translate(-5px, 6px)' : 'none';
+            bars[1].style.opacity = navMenu.classList.contains('active') ? '0' : '1';
+            bars[2].style.transform = navMenu.classList.contains('active') ? 'rotate(45deg) translate(-5px, -6px)' : 'none';
         });
-        
-        // 4. Scroll Spy (Highlighting link based on section visibility)
-        const sections = document.querySelectorAll('main section');
-        
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.5 // Highlight when 50% of the section is visible
-        };
 
-        const sectionObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    removeActiveClass();
-                    const targetLink = document.querySelector(`.sidebar nav ul li a[href="#${entry.target.id}"]`);
-                    if (targetLink) {
-                        targetLink.classList.add('active');
-                    }
-                }
-            });
-        }, observerOptions);
-
-        sections.forEach(section => {
-            sectionObserver.observe(section);
-        });
-        
-    });
-</script>
+        // Close menu on link click
+        document.querySelectorAll('.nav-links a').forEach(n => n.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            const bars = document.querySelectorAll('.bar');
+            bars[0].style.transform = 'none';
+            bars[1].style.opacity = '1';
+            bars[2].style.transform = 'none';
+        }));
+    </script>
 </body>
+
 </html>
