@@ -1,475 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <title>C-DEV | Portfolio</title>
+    <title>C-DEV | Web Developer | I Help Businesses Get Customers Online</title>
     <style>
-        /* --- RESET & BASE STYLES --- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            line-height: 1.6;
-            color: #333;
-            background: #fff;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        /* --- HEADER & NAV --- */
-        header {
-            background: #1a237e;
-            color: white;
-            padding: 1rem 5%;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
-        .nav-links {
-            display: flex;
-        }
-
-        .nav-links li {
-            margin-left: 25px;
-        }
-
-        .nav-links a:hover {
-            color: #ffab00;
-        }
-
-        /* Hamburger */
-        .hamburger {
-            display: none;
-            cursor: pointer;
-        }
-
-        .bar {
-            display: block;
-            width: 25px;
-            height: 3px;
-            background: white;
-            margin: 5px auto;
-            transition: 0.4s;
-        }
-
-        /* --- SECTIONS --- */
-        section {
-            padding: 100px 10% 60px;
-            min-height: 80vh;
-        }
-
-        h2 {
-            text-align: center;
-            margin-bottom: 40px;
-            font-size: 2.5rem;
-            color: #1a237e;
-        }
-
-        /* Home */
-        #home {
-            background: linear-gradient(rgba(26, 35, 126, 0.8), rgba(26, 35, 126, 0.8)), url('c-dev123.jpg');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        /* About Section (Two Divs: Left Text, Right Image) */
-        .about-container {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-        }
-
-        .about-text {
-            flex: 1;
-        }
-
-        .about-image {
-            flex: 1;
-            text-align: right;
-        }
-
-        .about-image img {
-            width: 100%;
-            max-width: 450px;
-            border-radius: 15px;
-            box-shadow: 10px 10px 0 #ffab00;
-        }
-
-        /* Project Grid */
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .project-card {
-            border: 1px solid #eee;
-            padding: 20px;
-            border-radius: 10px;
-            transition: 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Testimonial */
-        .testimonial-item {
-            background: #f4f4f4;
-            padding: 30px;
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .testimonial-item img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .testimonial-item h4 {
-            color: #1a237e;
-        }
-
-        .testimonial-item span {
-            font-size: 0.9rem;
-            color: #777;
-            font-style: italic;
-        }
-
-        /* Resume */
-        #resume {
-            text-align: center;
-            background: #fafafa;
-        }
-
-        .download-btn {
-            display: inline-block;
-            padding: 15px 30px;
-            background: #ffab00;
-            color: #1a237e;
-            font-weight: bold;
-            border-radius: 5px;
-            margin-top: 20px;
-            transition: 0.3s;
-        }
-
-        .download-btn:hover {
-            background: #e69a00;
-        }
-
-        /* Contact Section (Two Divs: Left Info, Right Map) */
-        .contact-container {
-            display: flex;
-            gap: 40px;
-        }
-
-        .contact-info {
-            flex: 1;
-        }
-
-        .contact-map {
-            flex: 1;
-            height: 300px;
-            background: #eee;
-            border-radius: 10px;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid #ccc;
-        }
-
-        /* --- FOOTER --- */
-        footer {
-            background: #1a237e;
-            color: white;
-            padding: 50px 10% 20px;
-            text-align: center;
-        }
-
-        .footer-nav {
-            margin: 20px 0;
-        }
-
-        .footer-nav a {
-            margin: 0 10px;
-            font-size: 0.9rem;
-        }
-
-        .social-icons {
-            margin-bottom: 20px;
-        }
-
-        .social-icons a {
-            margin: 0 15px;
-            font-size: 1.2rem;
-            color: #ffab00;
-        }
-
-        /* --- RESPONSIVE --- */
-        @media (max-width: 768px) {
-            .hamburger {
-                display: block;
-            }
-
-            .nav-links {
-                position: fixed;
-                left: -100%;
-                top: 70px;
-                flex-direction: column;
-                background: #1a237e;
-                width: 100%;
-                text-align: center;
-                transition: 0.3s;
-                box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-            }
-
-            .nav-links.active {
-                left: 0;
-            }
-
-            .nav-links li {
-                margin: 20px 0;
-            }
-
-            .about-container,
-            .contact-container,
-            .testimonial-item {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .about-image {
-                text-align: center;
-                order: -1;
-            }
-        }
-
-        .contact-container {
-            display: flex;
-            align-items: flex-start;
-            gap: 40px;
-        }
-
-        .contact-info,
-        .contact-map {
-            flex: 1;
-            /* Ensures both divs take up equal space */
-        }
-
-        .contact-map {
-            min-height: 350px;
-            width: 100%;
-        }
-
-        /* Mobile adjustments */
-        @media (max-width: 768px) {
-            .contact-container {
-                flex-direction: column;
-            }
-
-            .contact-map {
-                width: 100%;
-                margin-top: 20px;
-            }
-        }
-
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .project-card {
-            background: #fff;
-            border: 1px solid #eee;
-            border-radius: 10px;
-            overflow: hidden;
-            /* Ensures the image doesn't bleed out of rounded corners */
-            transition: 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .project-img-container {
-            width: 100%;
-            height: 200px;
-            overflow: hidden;
-        }
-
-        .project-img-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            /* Maintains aspect ratio while filling the container */
-            transition: 0.5s ease;
-        }
-
-        .project-card:hover .project-img-container img {
-            transform: scale(1.1);
-            /* Subtle zoom effect on hover */
-        }
-
-        .project-content {
-            padding: 20px;
-        }
-
-        .project-content h3 {
-            margin-bottom: 10px;
-            color: #1a237e;
-        }
-
-        /* Testimonial Grid Layout */
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            justify-content: center;
-        }
-
-        .testimonial-item {
-            background: #fdfdfd;
-            padding: 25px;
-            border-radius: 15px;
-            border: 1px solid #eee;
-            display: flex;
-            flex-direction: column;
-            /* Stacks image above text within the card */
-            align-items: center;
-            text-align: center;
-            transition: 0.3s ease;
-        }
-
-        .testimonial-item:hover {
-            border-color: #ffab00;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-        }
-
-        .testimonial-item img {
-            width: 90px;
-            height: 90px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 15px;
-            border: 3px solid #1a237e;
-        }
-
-        .testimonial-item h4 {
-            color: #1a237e;
-            font-size: 1.2rem;
-            margin-bottom: 2px;
-        }
-
-        .testimonial-item span {
-            font-size: 0.85rem;
-            color: #ffab00;
-            font-weight: 600;
-            text-transform: uppercase;
-            display: block;
-            margin-bottom: 15px;
-        }
-
-        .testimonial-item p {
-            font-size: 0.95rem;
-            color: #555;
-            font-style: italic;
-            line-height: 1.5;
-        }
-
-        /* Mobile Tweak */
-        @media (max-width: 600px) {
-            .testimonial-grid {
-                grid-template-columns: 1fr;
-                /* Single column on very small screens */
-            }
-        }
-
-        .contact-info p {
-            margin-bottom: 15px;
-            font-size: 1.1rem;
-        }
-
-        .contact-link {
-            color: #1a237e;
-            /* Matches your brand blue */
-            font-weight: 600;
-            transition: 0.3s;
-            text-decoration: none;
-            border-bottom: 2px solid transparent;
-        }
-
-        .contact-link:hover {
-            color: #ffab00;
-            /* Matches your brand yellow */
-            border-bottom: 2px solid #ffab00;
-        }
-
-        .contact-container {
-            display: flex;
-            gap: 40px;
-            align-items: flex-start;
-        }
-
-        /* Ensure responsiveness for the two-div layout */
-        @media (max-width: 768px) {
-            .contact-container {
-                flex-direction: column;
-            }
-
-            .contact-info,
-            .contact-map {
-                width: 100%;
-            }
-        }
+        *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;}
+        html{scroll-behavior:smooth;}
+        body{line-height:1.6;color:#333;background:#fff;}
+        ul{list-style:none;} a{text-decoration:none;color:inherit;}
+        header{background:#1a237e;color:white;padding:1rem 5%;position:fixed;width:100%;top:0;z-index:1000;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 10px rgba(0,0,0,0.1);}
+       .logo{font-size:1.5rem;font-weight:bold;}
+       .nav-links{display:flex;}.nav-links li{margin-left:25px;}.nav-links a:hover{color:#ffab00;}
+       .hamburger{display:none;cursor:pointer;}.bar{display:block;width:25px;height:3px;background:white;margin:5px auto;transition:0.4s;}
+        section{padding:100px 10% 60px;min-height:80vh;} h2{text-align:center;margin-bottom:40px;font-size:2.5rem;color:#1a237e;}
+        #home{background:linear-gradient(rgba(26,35,126,0.85),rgba(26,35,126,0.85)),url('c-dev123.jpg');background-size:cover;background-position:center;color:white;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;}
+       .hero-btn{display:inline-block;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:bold;margin:8px;transition:0.3s;}
+       .about-container{display:flex;align-items:center;gap:50px;}.about-text{flex:1;}.about-image{flex:1;text-align:right;}.about-image img{width:100%;max-width:450px;border-radius:15px;box-shadow:10px 10px 0 #ffab00;}
+       .project-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;}
+       .project-card{background:#fff;border:1px solid #eee;border-radius:10px;overflow:hidden;transition:0.3s;}.project-card:hover{transform:translateY(-10px);box-shadow:0 15px 30px rgba(0,0,0,0.1);}
+       .project-img-container{width:100%;height:200px;overflow:hidden;}.project-img-container img{width:100%;height:100%;object-fit:cover;transition:0.5s ease;}.project-card:hover.project-img-container img{transform:scale(1.1);}
+       .project-content{padding:20px;}.project-content h3{margin-bottom:10px;color:#1a237e;}
+       .testimonial-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:25px;justify-content:center;}
+       .testimonial-item{background:#fdfdfd;padding:25px;border-radius:15px;border:1px solid #eee;display:flex;flex-direction:column;align-items:center;text-align:center;transition:0.3s ease;}.testimonial-item:hover{border-color:#ffab00;box-shadow:0 8px 20px rgba(0,0,0,0.05);}
+       .testimonial-item img{width:90px;height:90px;border-radius:50%;object-fit:cover;margin-bottom:15px;border:3px solid #1a237e;}.testimonial-item h4{color:#1a237e;font-size:1.2rem;margin-bottom:2px;}.testimonial-item span{font-size:0.85rem;color:#ffab00;font-weight:600;text-transform:uppercase;display:block;margin-bottom:15px;}.testimonial-item p{font-size:0.95rem;color:#555;font-style:italic;line-height:1.5;}
+        #resume{text-align:center;background:#fafafa;}.download-btn{display:inline-block;padding:15px 30px;background:#ffab00;color:#1a237e;font-weight:bold;border-radius:5px;margin-top:20px;transition:0.3s;}.download-btn:hover{background:#e69a00;}
+       .contact-container{display:flex;gap:40px;align-items:flex-start;}.contact-info,.contact-map{flex:1;}.contact-map{min-height:350px;width:100%;background:#eee;border-radius:10px;overflow:hidden;display:flex;align-items:center;justify-content:center;border:1px solid #ccc;}
+       .contact-info p{margin-bottom:15px;font-size:1.1rem;}.contact-link{color:#1a237e;font-weight:600;transition:0.3s;text-decoration:none;border-bottom:2px solid transparent;}.contact-link:hover{color:#ffab00;border-bottom:2px solid #ffab00;}
+        footer{background:#1a237e;color:white;padding:50px 10% 20px;text-align:center;}.footer-nav{margin:20px 0;}.footer-nav a{margin:0 10px;font-size:0.9rem;}.social-icons{margin-bottom:20px;}.social-icons a{margin:0 15px;font-size:1.2rem;color:#ffab00;}
+        @media (max-width:768px){.hamburger{display:block;}.nav-links{position:fixed;left:-100%;top:70px;flex-direction:column;background:#1a237e;width:100%;text-align:center;transition:0.3s;box-shadow:0 10px 10px rgba(0,0,0,0.1);}.nav-links.active{left:0;}.nav-links li{margin:20px 0;}.about-container,.contact-container,.testimonial-item{flex-direction:column;text-align:center;}.about-image{text-align:center;order:-1;}.contact-map{width:100%;margin-top:20px;}}
     </style>
 </head>
-
 <body>
 
     <header>
@@ -482,78 +44,48 @@
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-        <div class="hamburger" id="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
+        <div class="hamburger" id="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
     </header>
 
     <section id="home">
         <h1>Hi, I'm Chukwudi Augustine</h1>
-<h2>Web Developer & Graphic Designer</h2>
-<p style="font-size:18px; margin-top:10px;">I help small businesses in Port Harcourt & Abuja get more customers online with fast websites and WhatsApp stores.</p>
-<a href="https://wa.me/2348162892235" style="background:green; color:#fff; padding:12px 20px; text-decoration:none; border-radius:8px; display:inline-block; margin-top:15px;">Chat Me on WhatsApp</a>
+        <h2 style="color:white; font-size:22px; margin:10px 0; font-weight:400;">Web Developer & Graphic Designer | I Help Small Businesses in PH & Abuja Get More Customers Online</h2>
+        <p style="font-size:18px; margin-top:10px; max-width:700px;">I build fast, simple websites and WhatsApp stores that bring calls and orders. No big grammar, just results.</p>
+        <div style="margin-top:20px;">
+            <a href="#project" class="hero-btn" style="background:white; color:#1a237e;">View My Work</a>
+            <a href="https://wa.me/2348162892235?text=Hello%20C-DEV%2C%20I%20saw%20your%20portfolio" class="hero-btn" style="background:#25D366!important; color:white!important;">Chat on WhatsApp</a>
+        </div>
     </section>
 
-
-
     <section id="project">
-        <h2>My Projects</h2>
+        <h2>My Projects - Results, Not Just Design</h2>
         <div class="project-grid">
-            <!-- Project Card 1 -->
            <div class="project-card">
-                <div class="project-img-container">
-                    <img src="images/music.png" alt="fashion store">
-                </div>
+                <div class="project-img-container"><img src="images/music.png" alt="music website"></div>
                 <div class="project-content">
-                    <h3>Tehillah gospelmusic website</h3>
-                    <p>A sanctuary for the soul in the digital age. Tehillah Gospel Music is a premier platform dedicated to uplifting spirits 
-                        through curated worship, soul-stirring melodies, and contemporary gospel artistry. Designed to bridge 
-                        the gap between faith and technology, this platform provides a seamless 
-                        experience for listeners to stream, discover, and connect with music that inspires hope, redemption, and praise</p>
+                    <h3>Tehillah Gospel Music Website</h3>
+                    <p>Built a music platform where fans can stream and discover gospel songs easily on phone. Result: More listeners stay longer and can contact artist directly.</p>
                 </div>
             </div>
-
-            <!-- Project Card 2 -->
             <div class="project-card">
-                <div class="project-img-container">
-                    <img src="images/hosting1.jpg" alt="fashion store">
-                </div>
+                <div class="project-img-container"><img src="images/hosting1.jpg" alt="fashion store"></div>
                 <div class="project-content">
-                    <h3>Fashion Store</h3>
-                    <p>A high-performance digital store built for fashion retailers specializing in footwear and bags. 
-                        This project emphasizes a premium aesthetic,
-                        lightning-fast product loading,
-                        and a simplified sales funnel via direct WhatsApp integration to maximize customer engagement.</p>
+                    <h3>Fashion Store - Shoes & Bags</h3>
+                    <p>Built a fast online store with direct WhatsApp order. Result: Client sells without paying for expensive e-commerce, customers order in 2 clicks.</p>
                 </div>
             </div>
-
             <div class="project-card">
-                <div class="project-img-container">
-                    <img src="images/mezu5a.jpg" alt="graphic design">
-                </div>
+                <div class="project-img-container"><img src="images/mezu5a.jpg" alt="food business"></div>
                 <div class="project-content">
-                    <h3>Graphic Design</h3>
-                    <p>The client needed a professional way to showcase her specialized food products and manage incoming orders 
-                        without the complexity of a massive, traditional e-commerce site.
-The Solution: I designed a custom, minimalist UI that keeps the focus on the product photography. I leveraged my graphic design background 
-                        to ensure the brand colors were consistent across all digital assets. By integrating a direct WhatsApp ordering 
-                        link, I provided the client with a low-friction, 
-                        high-conversion tool that allows her to manage her "Paper Soup" sales directly from her phone.</p>
+                    <h3>Food Business - Menu & Ordering</h3>
+                    <p>Created a clean menu page for food business. Result: Orders go straight to her WhatsApp, she manages sales from her phone with no extra app.</p>
                 </div>
             </div>
-
             <div class="project-card">
-                <div class="project-img-container">
-                    <img src="images/birthday.jpg" alt="graphic design">
-                </div>
+                <div class="project-img-container"><img src="images/birthday.jpg" alt="graphic design"></div>
                 <div class="project-content">
-                    <h3>Graphic Design</h3>
-                    <p>I was commissioned to design a high-fidelity birthday flyer for a client. My goal was to create a design that captured the client’s
-            personal brand and event theme. Using CorelDraw and Photoshop, I focused on professional typography, color harmony, and a modern 
-            layout that ensured the event details were striking and easily readable. This project demonstrates
-            my ability to translate client needs into memorable visual assets for personal branding and event promotion.</p>
+                    <h3>Birthday Flyer Design</h3>
+                    <p>Designed a professional birthday flyer using CorelDraw & Photoshop. Result: Clean, readable design that helped client promote event faster.</p>
                 </div>
             </div>
         </div>
@@ -561,46 +93,24 @@ The Solution: I designed a custom, minimalist UI that keeps the focus on the pro
 
     <section id="resume">
         <h2>My Resume</h2>
-        <p>I’m always open to discussing new web development or graphic design opportunities. 
-            You can review my complete project history and skills by accessing my professional CV below.</p>
-        <!-- Place your PDF file in the same folder and update the href -->
+        <p>I'm open to web development & graphic design jobs. Review my skills below.</p>
         <a href="resume/chukwudi-cv.pdf" class="download-btn" download>Download CV (PDF)</a>
     </section>
 
     <section id="testimonial">
         <h2>Client Testimonials</h2>
         <div class="testimonial-grid">
-            <!-- Testimonial 1 -->
             <div class="testimonial-item">
                 <img src="images/8d4e01265a6939caa39cf55fcfc19720.jpg" alt="John Smith">
-                <div class="t-info">
-                    <h4>John Smith</h4>
-                    <span>Creative Director</span>
-                    <p>"C-DEV delivered an exceptional landing page that perfectly captured our brand identity. The
-                        attention to detail is unmatched."</p>
-                </div>
+                <div class="t-info"><h4>John Smith</h4><span>Creative Director</span><p>"C-DEV delivered an exceptional landing page that perfectly captured our brand identity."</p></div>
             </div>
-
-            <!-- Testimonial 2 -->
             <div class="testimonial-item">
                 <img src="images/long.jpg" alt="Sarah Adams">
-                <div class="t-info">
-                    <h4>Sarah Adams</h4>
-                    <span>Marketing Lead</span>
-                    <p>"The WhatsApp integration for our shoe business site made sales so much easier. Highly
-                        professional work!"</p>
-                </div>
+                <div class="t-info"><h4>Sarah Adams</h4><span>Marketing Lead</span><p>"The WhatsApp integration for our shoe business made sales so much easier. Highly professional!"</p></div>
             </div>
-
-            <!-- Testimonial 3 -->
             <div class="testimonial-item">
                 <img src="images/jollof.jpg" alt="David Okoro">
-                <div class="t-info">
-                    <h4>David Okoro</h4>
-                    <span>Proprietor</span>
-                    <p>"The school management system simplified our attendance and grading process. A top-tier
-                        developer."</p>
-                </div>
+                <div class="t-info"><h4>David Okoro</h4><span>Proprietor</span><p>"The school management system simplified our attendance and grading. A top-tier developer."</p></div>
             </div>
         </div>
     </section>
@@ -609,105 +119,48 @@ The Solution: I designed a custom, minimalist UI that keeps the focus on the pro
         <h2>About Me</h2>
         <div class="about-container">
             <div class="about-text">
-                <p>I’m Chukwudi Augustine.
-
-I am a software developer and graphic designer dedicated to creating digital solutions that are as aesthetically pleasing as they are performant. Whether I am architecting a custom Content Management System for media platforms or designing promotional assets for tutoring services, my goal is the same: to deliver professional, modern, and user-centric results.
-
-My technical workflow combines industry-standard design tools like CorelDraw and Photoshop with a versatile development stack (HTML, CSS, JS, PHP, and Mysql). I thrive on turning complex requirements into streamlined, actionable digital products..</p>
+                <p>I'm Chukwudi Augustine. I am a software developer and graphic designer. I create digital solutions that are beautiful and fast. My tools: CorelDraw, Photoshop, HTML, CSS, JS, PHP, MySQL. I turn complex ideas into simple products that bring customers.</p>
             </div>
-            <div class="about-image">
-                <img src="images/image.jpg" alt="Work Space">
-            </div>
+            <div class="about-image"><img src="images/image.jpg" alt="Work Space"></div>
         </div>
     </section>
 
-    <!-- Replace your current #contact section with this code -->
     <section id="contact">
         <h2>Contact Me</h2>
         <div class="contact-container">
-            <!-- Left Side: Interactive Contact Details -->
             <div class="contact-info">
-                <p>
-                    <strong>Call:</strong>
-                    <a href="tel:+2347047168327" class="contact-link">+234 704 716 8327</a>
-                </p>
-                <p>
-                    <strong>WhatsApp:</strong>
-                    <a href="https://wa.me/2348162892235" target="_blank" class="contact-link">+234 816 289 2235</a>
-                </p>
-                <p>
-                    <strong>Email:</strong>
-                    <a href="mailto:chukwudiaugustine100@gmail.com"
-                        class="contact-link">chukwudiaugustine100@gmail.com</a>
-                </p>
-                <p>
-                    <strong>Location:</strong>
-                    <a href="https://maps.app.goo.gl/YourGoogleMapsLink" target="_blank" class="contact-link">Owerri,
-                        Nigeria</a>
-                </p>
+                <p><strong>Call:</strong> <a href="tel:+2347047168327" class="contact-link">+234 704 716 8327</a></p>
+                <p><strong>WhatsApp:</strong> <a href="https://wa.me/2348162892235" target="_blank" class="contact-link">+234 816 289 2235</a></p>
+                <p><strong>Email:</strong> <a href="mailto:chukwudiaugustine100@gmail.com" class="contact-link">chukwudiaugustine100@gmail.com</a></p>
+                <p><strong>Location:</strong> <a href="https://maps.app.goo.gl/YourGoogleMapsLink" target="_blank" class="contact-link">Owerri, Nigeria</a></p>
             </div>
-
-            <!-- Right Side: Interactive Google Map -->
             <div class="contact-map">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63560.03264426839!2d6.974916848632811!3d5.492543900000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104259ba2f99587f%3A0x6b29d9361732a39a!2sOwerri!5e0!3m2!1sen!2sng!4v1715456000000!5m2!1sen!2sng"
-                    width="100%" height="350" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63560.03264426839!2d6.974916848632811!3d5.492543900000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104259ba2f99587f%3A0x6b29d9361732a39a!2sOwerri!5e0!3m2!1sen!2sng!4v1715456000000!5m2!1sen!2sng" width="100%" height="350" style="border:0; border-radius:10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>
 
     <footer>
-        <div class="logo" style="margin-bottom: 15px;"><a href="index.html"><img src="c-dev44.png" width="100"></a>
-        </div>
-
-        <!-- Social Media Icons Section -->
+        <div class="logo" style="margin-bottom:15px;"><a href="index.html"><img src="c-dev44.png" width="100"></a></div>
         <div class="social-icons">
-            <a href="https://web.facebook.com/chukwudi.augustine.179042/" target="_blank" title="Facebook">
-                <i class="fa-brands fa-facebook"></i>
-            </a>
-            <a href="https://wa.me/2348162892235" target="_blank" title="WhatsApp">
-                <i class="fa-brands fa-whatsapp"></i>
-            </a>
-            <a href="https://x.com/chukwud05632310" target="_blank" title="X (Twitter)">
-                <i class="fa-brands fa-x-twitter"></i>
-            </a>
+            <a href="https://web.facebook.com/chukwudi.augustine.179042/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://wa.me/2348162892235" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://x.com/chukwud05632310" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
         </div>
-
-        <div class="footer-nav">
-            <a href="#home">Home</a> |
-            <a href="#about">About</a> |
-            <a href="#project">Projects</a> |
-            <a href="#contact">Contact</a>
-        </div>
-
+        <div class="footer-nav"><a href="#home">Home</a> | <a href="#about">About</a> | <a href="#project">Projects</a> | <a href="#contact">Contact</a></div>
         <p>&copy; 2026 C-DEV. All Rights Reserved.</p>
     </footer>
 
+    <!-- FLOATING WHATSAPP PLUG-IN - FORCED GREEN -->
+    <a href="https://wa.me/2348162892235?text=Hello%20C-DEV%2C%20I%20saw%20your%20portfolio%20and%20need%20a%20website"
+    style="position:fixed!important; bottom:20px!important; right:20px!important; background:#25D366!important; color:white!important; padding:15px 22px!important; border-radius:50px!important; text-decoration:none!important; font-weight:bold!important; z-index:99999!important; box-shadow:0 4px 15px rgba(0,0,0,0.3)!important;">
+    <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+    </a>
+
     <script>
-        const hamburger = document.getElementById('hamburger');
-        const navMenu = document.getElementById('nav-menu');
-
-        // Toggle mobile menu
-        hamburger.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            // Hamburger animation
-            const bars = document.querySelectorAll('.bar');
-            bars[0].style.transform = navMenu.classList.contains('active') ? 'rotate(-45deg) translate(-5px, 6px)' : 'none';
-            bars[1].style.opacity = navMenu.classList.contains('active') ? '0' : '1';
-            bars[2].style.transform = navMenu.classList.contains('active') ? 'rotate(45deg) translate(-5px, -6px)' : 'none';
-        });
-
-        // Close menu on link click
-        document.querySelectorAll('.nav-links a').forEach(n => n.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-            const bars = document.querySelectorAll('.bar');
-            bars[0].style.transform = 'none';
-            bars[1].style.opacity = '1';
-            bars[2].style.transform = 'none';
-        }));
+        const hamburger=document.getElementById('hamburger');const navMenu=document.getElementById('nav-menu');
+        hamburger.addEventListener('click',()=>{navMenu.classList.toggle('active');const bars=document.querySelectorAll('.bar');bars[0].style.transform=navMenu.classList.contains('active')?'rotate(-45deg) translate(-5px, 6px)':'none';bars[1].style.opacity=navMenu.classList.contains('active')?'0':'1';bars[2].style.transform=navMenu.classList.contains('active')?'rotate(45deg) translate(-5px, -6px)':'none';});
+        document.querySelectorAll('.nav-links a').forEach(n=>n.addEventListener('click',()=>{navMenu.classList.remove('active');const bars=document.querySelectorAll('.bar');bars[0].style.transform='none';bars[1].style.opacity='1';bars[2].style.transform='none';}));
     </script>
 </body>
-
 </html>
