@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <title>C-DEV | I Build Websites That Bring Customers</title>
@@ -11,27 +10,26 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
 html{scroll-behavior:smooth}
 body{background:#f8f9ff;color:#1a1a2e;line-height:1.7}
-header{position:fixed;top:0;width:100%;z-index:1000;background:rgba(255,255,255,0.8);backdrop-filter:blur(12px);border-bottom:1px solid #eee;display:flex;justify-content:space-between;align-items:center;padding:0.8rem 6%}
+a{text-decoration:none!important} /* FIXES UNDERLINE ISSUE */
+header{position:fixed;top:0;width:100%;z-index:1000;background:#fff;box-shadow:0 2px 15px rgba(0,0,0,0.07);display:flex;justify-content:space-between;align-items:center;padding:0.8rem 6%}
 .logo img{width:95px}
 .nav-links{display:flex;gap:28px;list-style:none}
-.nav-links a{font-weight:600;color:#1a237e;font-size:0.95rem}
-.nav-links a:hover{color:#ffab00}
+.nav-links a{font-weight:600;color:#1a237e!important;font-size:0.95rem;text-decoration:none!important}
+.nav-links a:hover{color:#ffab00!important}
 .hamburger{display:none;cursor:pointer}.bar{display:block;width:24px;height:3px;background:#1a237e;margin:5px 0;border-radius:2px}
 section{padding:110px 6% 70px}
 h2{font-size:2.4rem;font-weight:800;color:#1a237e;text-align:center;margin-bottom:15px}
 .sub{color:#666;text-align:center;max-width:600px;margin:0 auto 45px}
-/* HERO MODERN */
-#home{min-height:92vh;background:radial-gradient(120% 120% at 20% 20%,#e8eaff 0%,#f8f9ff 60%),url('c-dev123.jpg');background-blend-mode:overlay;background-size:cover;background-position:center;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;text-align:left}
-#home h1{font-size:3rem;line-height:1.1;font-weight:800;max-width:650px}
-#home h1 span{background:linear-gradient(90deg,#1a237e,#6c63ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-#home h2{font-size:1.25rem;text-align:left;font-weight:400;color:#333;margin:14px 0;max-width:600px}
-.badge{display:inline-block;background:#1a237e;color:#fff;padding:6px 14px;border-radius:30px;font-size:0.8rem;margin-bottom:14px;letter-spacing:0.5px}
-.btn{padding:14px 26px;border-radius:10px;font-weight:700;text-decoration:none;display:inline-block;margin-right:10px;margin-top:10px;transition:0.25s}
-.btn-primary{background:#1a237e;color:#fff;box-shadow:0 8px 20px rgba(26,35,126,0.25)}
+/* HERO FIXED - WHITE TEXT ON DARK OVERLAY SO IT'S VISIBLE */
+#home{min-height:92vh;background:linear-gradient(rgba(13,15,43,0.82),rgba(26,35,126,0.85)),url('c-dev123.jpg');background-size:cover;background-position:center;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;text-align:left;color:#fff}
+#home h1{font-size:3rem;line-height:1.1;font-weight:800;max-width:650px;color:#fff}
+#home h1 span{color:#ffab00}
+#home h2{font-size:1.25rem;text-align:left;font-weight:400;color:#e0e0ff!important;margin:14px 0;max-width:600px}
+.badge{display:inline-block;background:#ffab00;color:#1a237e;padding:6px 14px;border-radius:30px;font-size:0.8rem;margin-bottom:14px;letter-spacing:0.5px;font-weight:700}
+.btn{padding:14px 26px;border-radius:10px;font-weight:700;text-decoration:none!important;display:inline-block;margin-right:10px;margin-top:10px;transition:0.25s}
+.btn-primary{background:#fff;color:#1a237e;box-shadow:0 8px 20px rgba(0,0,0,0.2)}
 .btn-primary:hover{transform:translateY(-2px)}
 .btn-wa{background:#25D366!important;color:#fff!important}
-.btn-wa:hover{transform:translateY(-2px)}
-/* PROJECTS */
 .project-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
 .project-card{background:#fff;border-radius:18px;overflow:hidden;border:1px solid #eef0ff;transition:0.3s}
 .project-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(26,35,126,0.1)}
@@ -39,32 +37,29 @@ h2{font-size:2.4rem;font-weight:800;color:#1a237e;text-align:center;margin-botto
 .project-img-container img{width:100%;height:100%;object-fit:cover;transition:0.6s}
 .project-card:hover img{transform:scale(1.07)}
 .project-content{padding:20px}
-.project-content h3{color:#1a237e;margin-bottom:8px;font-size:1.15rem}
+.project-content h3{color:#1a237e;margin-bottom:8px}
 .project-content p{color:#555;font-size:0.95rem}
-/* TESTIMONIALS */
 .testimonial-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
 .testimonial-item{background:#fff;padding:26px;border-radius:18px;border:1px solid #eef0ff;text-align:center}
 .testimonial-item img{width:76px;height:76px;border-radius:50%;object-fit:cover;margin-bottom:12px;border:3px solid #1a237e}
 .testimonial-item h4{color:#1a237e}.testimonial-item span{color:#ffab00;font-size:0.8rem;font-weight:700;text-transform:uppercase}
 .testimonial-item p{margin-top:10px;color:#555;font-style:italic;font-size:0.95rem}
-/* ABOUT + CONTACT */
 .about-container,.contact-container{display:flex;gap:40px;align-items:center}
 .about-text,.contact-info{flex:1}.about-image,.contact-map{flex:1}
 .about-image img{width:100%;border-radius:18px;box-shadow:12px 12px 0 #ffab00}
-.contact-info p{margin-bottom:14px}.contact-link{color:#1a237e;font-weight:600;border-bottom:2px solid transparent}.contact-link:hover{color:#ffab00;border-bottom-color:#ffab00}
+.contact-info p{margin-bottom:14px}.contact-link{color:#1a237e;font-weight:600}
 .contact-map{border-radius:18px;overflow:hidden;min-height:360px;background:#eee}
-.download-btn{display:inline-block;background:#ffab00;color:#1a237e;padding:14px 28px;border-radius:10px;font-weight:800;margin-top:18px}
+.download-btn{display:inline-block;background:#ffab00;color:#1a237e!important;padding:14px 28px;border-radius:10px;font-weight:800;margin-top:18px;text-decoration:none!important}
 footer{background:#0d0f2b;color:#fff;padding:50px 6% 20px;text-align:center}
-.social-icons a{color:#ffab00;margin:0 12px;font-size:1.35rem;transition:0.2s;display:inline-block}
-.social-icons a:hover{transform:translateY(-3px);color:#fff}
-.footer-nav{margin:18px 0}.footer-nav a{color:#aaa;margin:0 8px;font-size:0.9rem}
+.social-icons a{color:#ffab00;margin:0 12px;font-size:1.35rem;text-decoration:none!important}
+.footer-nav a{color:#aaa;margin:0 8px;font-size:0.9rem;text-decoration:none!important}
 .float-wa{position:fixed!important;bottom:22px!important;right:22px!important;background:#25D366!important;color:#fff!important;padding:14px 22px!important;border-radius:50px!important;font-weight:800!important;z-index:99999!important;box-shadow:0 8px 24px rgba(0,0,0,0.25)!important;text-decoration:none!important}
 @media(max-width:800px){.hamburger{display:block}.nav-links{position:fixed;left:-100%;top:64px;flex-direction:column;background:#fff;width:100%;padding:20px 0;box-shadow:0 10px 20px rgba(0,0,0,0.08);transition:0.3s}.nav-links.active{left:0}.nav-links li{margin:16px 0;text-align:center}#home h1{font-size:2.2rem}.about-container,.contact-container{flex-direction:column}}
 </style>
 </head>
 <body>
 <header>
-<div class="logo"><a href="index.html"><img src="c-dev44.png" alt="C-DEV"></a></div>
+<div class="logo"><a href="index.html" style="text-decoration:none"><img src="c-dev44.png" alt="C-DEV"></a></div>
 <ul class="nav-links" id="nav-menu">
 <li><a href="#home">Home</a></li><li><a href="#project">Work</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li>
 </ul>
@@ -74,7 +69,7 @@ footer{background:#0d0f2b;color:#fff;padding:50px 6% 20px;text-align:center}
 <section id="home">
 <span class="badge">AVAILABLE FOR NEW PROJECTS</span>
 <h1>I Build <span>Fast Websites</span> That Bring Customers on WhatsApp</h1>
-<h2 style="text-align:left">Hi, I'm Chukwudi Augustine — Web Developer & Designer for small businesses in PH & Abuja. No big grammar, just results.</h2>
+<h2>Hi, I'm Chukwudi Augustine — Web Developer & Designer for small businesses in PH & Abuja. No big grammar, just results.</h2>
 <div>
 <a href="#project" class="btn btn-primary">View My Work →</a>
 <a href="https://wa.me/2348162892235?text=Hello%20C-DEV%2C%20I%20saw%20your%20portfolio" class="btn btn-wa"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
@@ -83,19 +78,19 @@ footer{background:#0d0f2b;color:#fff;padding:50px 6% 20px;text-align:center}
 
 <section id="project">
 <h2>Selected Work</h2>
-<p class="sub">Results, not just designs — every project brings orders or calls.</p>
+<p class="sub">Results, not just designs.</p>
 <div class="project-grid">
-<div class="project-card"><div class="project-img-container"><img src="images/157984.png" alt="music website" loading="lazy"></div><div class="project-content"><h3>Tehillah Gospel Music</h3><p>Music streaming platform that keeps fans listening longer + direct artist contact.</p></div></div>
-<div class="project-card"><div class="project-img-container"><img src="images/157986.jpg" alt="fashion store" loading="lazy"></div><div class="project-content"><h3>Fashion Store</h3><p>Fast store with 2-click WhatsApp order. Client sells without expensive e-commerce.</p></div></div>
-<div class="project-card"><div class="project-img-container"><img src="images/158006.jpg" alt="food business" loading="lazy"></div><div class="project-content"><h3>Food Business</h3><p>Menu + WhatsApp ordering system — owner manages all sales from phone.</p></div></div>
-<div class="project-card"><div class="project-img-container"><img src="images/158000.jpg" alt="flyer" loading="lazy"></div><div class="project-content"><h3>Birthday Flyer Design</h3><p>Professional CorelDraw & Photoshop design that made event promotion faster.</p></div></div>
+<div class="project-card"><div class="project-img-container"><img src="images/157984.png" alt="music website" loading="lazy"></div><div class="project-content"><h3>Tehillah Gospel Music</h3><p>Music streaming platform that keeps fans listening longer.</p></div></div>
+<div class="project-card"><div class="project-img-container"><img src="images/157986.jpg" alt="fashion store" loading="lazy"></div><div class="project-content"><h3>Fashion Store</h3><p>Fast store with 2-click WhatsApp order.</p></div></div>
+<div class="project-card"><div class="project-img-container"><img src="images/158006.jpg" alt="food business" loading="lazy"></div><div class="project-content"><h3>Food Business</h3><p>Menu + WhatsApp ordering — manages sales from phone.</p></div></div>
+<div class="project-card"><div class="project-img-container"><img src="images/158000.jpg" alt="flyer" loading="lazy"></div><div class="project-content"><h3>Birthday Flyer Design</h3><p>Professional design that made event promotion faster.</p></div></div>
 </div>
 </section>
 
 <section id="about">
 <h2>About Me</h2>
 <div class="about-container">
-<div class="about-text"><p>I'm <b>Chukwudi Augustine (C-DEV)</b>. I turn complex ideas into simple, fast products that bring customers. Tools: CorelDraw, Photoshop, HTML, CSS, JS, PHP, MySQL.<br><br>I help businesses in Port Harcourt, Owerri & Abuja get online quickly with WhatsApp stores, not complicated shops.</p><a href="resume/chukwudi-cv.pdf" class="download-btn" download>Download CV</a></div>
+<div class="about-text"><p>I'm <b>Chukwudi Augustine (C-DEV)</b>. I turn complex ideas into simple, fast products that bring customers. Tools: CorelDraw, Photoshop, HTML, CSS, JS, PHP, MySQL.</p><a href="resume/chukwudi-cv.pdf" class="download-btn" download>Download CV</a></div>
 <div class="about-image"><img src="images/157985.jpg" alt="Work" loading="lazy"></div>
 </div>
 </section>
@@ -103,15 +98,15 @@ footer{background:#0d0f2b;color:#fff;padding:50px 6% 20px;text-align:center}
 <section id="testimonial">
 <h2>What Clients Say</h2>
 <div class="testimonial-grid">
-<div class="testimonial-item"><img src="images/157929.jpg" alt="" loading="lazy"><h4>John Smith</h4><span>Creative Director</span><p>"C-DEV delivered an exceptional landing page that captured our brand."</p></div>
-<div class="testimonial-item"><img src="images/158011.jpg" alt="" loading="lazy"><h4>Sarah Adams</h4><span>Marketing Lead</span><p>"WhatsApp integration made sales so much easier. Highly professional!"</p></div>
-<div class="testimonial-item"><img src="images/158010.jpg" alt="" loading="lazy"><h4>David Okoro</h4><span>Proprietor</span><p>"School management system simplified attendance and grading."</p></div>
+<div class="testimonial-item"><img src="images/157929.jpg" alt="" loading="lazy"><h4>John Smith</h4><span>Creative Director</span><p>"C-DEV delivered an exceptional landing page."</p></div>
+<div class="testimonial-item"><img src="images/158011.jpg" alt="" loading="lazy"><h4>Sarah Adams</h4><span>Marketing Lead</span><p>"WhatsApp integration made sales easier!"</p></div>
+<div class="testimonial-item"><img src="images/158010.jpg" alt="" loading="lazy"><h4>David Okoro</h4><span>Proprietor</span><p>"School management simplified our work."</p></div>
 </div>
 </section>
 
 <section id="contact">
 <h2>Let's Build Yours</h2>
-<p class="sub">Fast reply — I respond on WhatsApp in 10 mins.</p>
+<p class="sub">Fast reply on WhatsApp.</p>
 <div class="contact-container">
 <div class="contact-info">
 <p><i class="fa-solid fa-phone"></i> <a href="tel:+2347047168327" class="contact-link">+234 704 716 8327</a></p>
@@ -132,7 +127,7 @@ footer{background:#0d0f2b;color:#fff;padding:50px 6% 20px;text-align:center}
 <a href="https://wa.me/2348162892235" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
 <a href="https://x.com/chukwud05632310" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
 </div>
-<p style="color:#aaa;margin-top:10px">© 2026 C-DEV — Built with speed & care in PH</p>
+<p style="color:#aaa;margin-top:10px">© 2026 C-DEV</p>
 </footer>
 
 <a href="https://wa.me/2348162892235?text=Hello%20C-DEV%2C%20I%20saw%20your%20portfolio%20and%20need%20a%20website" class="float-wa"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
